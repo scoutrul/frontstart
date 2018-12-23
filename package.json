@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run pack && npm run startProd",
-    "startProd": "NODE_ENV=production node index.js",
+    "startProd": "SET NODE_ENV=development & node index.js",
     "pack": "webpack --mode production --config webpack.config.js",
     "startDev": "npm run packDev && node index.js",
     "packDev": "webpack --mode development --config webpack.config.js"
@@ -30,6 +30,7 @@
     "express": "^4.16.4",
     "jss": "^9.8.7",
     "mobile-detect": "^1.4.3",
+    "node": "^10.14.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
