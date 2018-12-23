@@ -1,9 +1,9 @@
 {
-  "name": "modern-web-app",
-  "version": "8.0.0",
-  "description": "Best MWA example by VanishMax",
+  "name": "frontstart",
+  "version": "1.0.1",
+  "description": "Frontstart Blog",
   "main": "app.js",
-  "author": "VanishMax",
+  "author": "frontstarter",
   "engines": {
     "node": "10.7.0",
     "npm": "6.1.0"
