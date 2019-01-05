@@ -32,11 +32,7 @@ export default function template(sheetsRegistry, helmet, initialState = {}, cont
                 <link rel="shortcut icon" href="/assets/logos/favicon.ico" type="image/x-icon">
                 <link rel="icon" href="/assets/logos/favicon.ico" type="image/x-icon">
                 <link rel="stylesheet" href="/assets/global.css">
-                <script>
-                  if ((!location.port || location.port == "80") && location.protocol != 'https:') {
-                    location.protocol = 'https:';
-                  }
-                </script>
+
               </head>
               <body>
                 <div class="content">
