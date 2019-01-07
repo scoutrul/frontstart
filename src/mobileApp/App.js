@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router'
 
 import Loadable from 'react-loadable'
 import Loading from '~/src/Loading'
+
 const AsyncHome = Loadable({
   loader: () => import(/* webpackChunkName: "MobileHome" */ './Home'),
   loading: Loading,

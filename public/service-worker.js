@@ -1,10 +1,11 @@
 var CACHE = 'cache'
 
-self.addEventListener('install', function(evt) {
+self.addEventListener('install', function (evt) {
   evt.waitUntil(precache())
+  console.log('[Service Worker] Install');
 })
 
-self.addEventListener('fetch', function(evt) {
+self.addEventListener('fetch', function (evt) {
   evt.respondWith(fromCache(evt.request))
   evt.waitUntil(update(evt.request))
 })
@@ -15,26 +16,20 @@ function precache() {
       './',
       '/assets/MWA.png',
       '/assets/global.css',
-      '/assets/logos/favicon.ico',
-      '/assets/logos/yellow 192.png',
-      '/assets/logos/yellow 512.png',
+      '/assets/favicon.ico',
       '/robots.txt'
     ])
   })
 }
 
-function fromCache(request) {
-  return caches.open(CACHE).then(function (cache) {
-    return cache.match(request).then(function (matching) {
-      return matching || null
-    })
-  })
+async function fromCache(request) {
+  const cache = await caches.open(CACHE);
+  const matching = await cache.match(request);
+  return matching || null;
 }
 
-function update(request) {
-  return caches.open(CACHE).then(function (cache) {
-    return fetch(request).then(function (response) {
-      return cache.put(request, response)
-    })
-  })
+async function update(request) {
+  const cache = await caches.open(CACHE);
+  const response = await fetch(request);
+  return cache.put(request, response);
 }

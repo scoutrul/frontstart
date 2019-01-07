@@ -29,8 +29,8 @@ export default function template(sheetsRegistry, helmet, initialState = {}, cont
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta name="theme-color" content="#810051">
                 <link rel="manifest" href="/manifest.json">
-                <link rel="shortcut icon" href="/assets/logos/favicon.ico" type="image/x-icon">
-                <link rel="icon" href="/assets/logos/favicon.ico" type="image/x-icon">
+                <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+                <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
                 <link rel="stylesheet" href="/assets/global.css">
 
               </head>
